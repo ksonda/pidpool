@@ -6,7 +6,7 @@ services:
       - 5432
     volumes:
       - pg_0_data:/bitnami/postgresql
-      - /scripts:/docker-entrypoint-initdb.d
+      - ./scripts:/docker-entrypoint-initdb.d
     environment:
       - POSTGRESQL_POSTGRES_PASSWORD=adminpassword
       - POSTGRESQL_USERNAME=customuser
@@ -44,10 +44,10 @@ services:
       - PGPOOL_SR_CHECK_USER=customuser
       - PGPOOL_SR_CHECK_PASSWORD=custompassword
       - PGPOOL_ENABLE_LDAP=no
-      - PGPOOL_POSTGRES_USERNAME=postgres
-      - PGPOOL_POSTGRES_PASSWORD=adminpassword
-      - PGPOOL_ADMIN_USERNAME=admin
-      - PGPOOL_ADMIN_PASSWORD=adminpassword
+      - PGPOOL_POSTGRES_USERNAME=customuser
+      - PGPOOL_POSTGRES_PASSWORD=custompassword
+      - PGPOOL_ADMIN_USERNAME=customuser
+      - PGPOOL_ADMIN_PASSWORD=custompassword
       - PGPOOL_ENABLE_LOAD_BALANCING=yes
       - PGPOOL_NUM_INIT_CHILDREN=100
       - PGPOOL_MAX_POOL=100
