@@ -70,7 +70,7 @@ services:
   apache-master:
      build:
          context: .
-          dockerfile: Dockerfile-ApacheMaster
+         dockerfile: Dockerfile-ApacheMaster
       depends_on:
           - pidsvc-master
       ports:
